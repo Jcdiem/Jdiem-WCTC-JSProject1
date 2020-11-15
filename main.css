@@ -1,0 +1,13 @@
+body{
+    background-image: url('assets/top-hdq-pizza-images-wallpapers-nice-coe51-collection.jpg');
+    background-repeat: repeat;
+    /*  Crusty goodness  */
+}
+div{
+    background-color: white;
+}
+
+nav, nav-item .active{
+    background-color: yellow;
+    color: black;
+}
