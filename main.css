@@ -11,3 +11,12 @@ nav, nav-item .active{
     background-color: yellow;
     color: black;
 }
+
+.groupContainer{
+    padding: 1px;
+    border: red 1px dotted;
+}
+
+.hidden{
+    display:none;
+}

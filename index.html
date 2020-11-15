@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project 1</title>
+    <title>Dave's Pizza Emporium</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,41 +10,107 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 <div class="container">
+    <h1 class="text-center">Dave's Pizza Emporium</h1>
     <nav>
         <ul id="tabs" class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" href="#home">Pizza</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#shop">Shipping</a>
+                <a id="deliveryNav" class="nav-link disabled" href="#delivery">Delivery</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Confirmation</a>
-            </li>
+<!--            <li class="nav-item">-->
+<!--                <a id="confirmNav" class="nav-link disabled" href="#contact">Confirmation</a>-->
+<!--            </li>-->
         </ul>
     </nav>
 
     <div class="tab-content">
         <div id="home" class="tab-pane active">
             <h2>Create your pizza!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consequuntur officia quisquam
-                repellendus sequi? Ad architecto aut dicta labore molestias nulla perferendis recusandae vel
-                veritatis.</p>
-            <p>
-                <img src="img/Ham-Sandwich.jpg" alt="Ham sandwich" id="sandwich">
-                <br>
-                <button id="animateButton">Animate!</button>
-            </p>
+            <form id="pizzaForm">
+                <div class="groupContainer">
+                    <h3>Size</h3>
+                    <div class="form-group">
+                        <label for="sizeSmall">Small $7.00</label>
+                        <input type="radio" name="pizSize" id="sizeSmall" value="7">
+                    </div>
+                    <div class="form-group">
+                        <label for="sizeMedium">Medium $9.00</label>
+                        <input type="radio" name="pizSize" id="sizeMedium" value="9">
+                    </div>
+                    <div class="form-group">
+                        <label for="sizeLarge">Large $12.00</label>
+                        <input type="radio" name="pizSize" id="sizeLarge" value="12">
+                    </div>
+                </div>
+                <div class="groupContainer">
+                    <h3>Meats</h3>
+                    <h5>$1.50 ea.</h5>
+                    <div class="form-group">
+                        <label for="meatSausage">Sausage</label>
+                        <input type="checkbox" id="meatSausage" name="meat" value="1.50">
+                    </div>
+                    <div class="form-group">
+                        <label for="meatChicken">Chicken</label>
+                        <input type="checkbox" id="meatChicken" name="meat" value="1.50">
+                    </div>
+                    <div class="form-group">
+                        <label for="meatBacon">Bacon</label>
+                        <input type="checkbox" id="meatBacon" name="meat" value="1.50">
+                    </div>
+                </div>
+                <div class="groupContainer">
+                    <h3>Veggies</h3>
+                    <h5>$1.00 ea.</h5>
+                    <div class="form-group">
+                        <label for="vegetableOlive">Olives</label>
+                        <input type="checkbox" id="vegetableOlive" name="veggie" value="1.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="vegetablePepper">Pepper</label>
+                        <input type="checkbox" id="vegetablePepper" name="veggie" value="1.00">
+                    </div>
+                    <div class="form-group">
+                        <!--Really a fruit, but whatever-->
+                        <label for="vegetableTomato">Tomato</label>
+                        <input type="checkbox" id="vegetableTomato" name="veggie" value="1.00">
+                    </div>
+                </div>
+            </form>
+            <button id="pizzaBtn" class="btn-primary">Add to order</button>
+            <p id="pizzaNotice">Your order has been added. You can now click on the Delivery tab.
+                You may use the navigation bar to return and edit your order any time before confirmation.</p>
+        </div>
+        <div id="delivery" class="tab-pane">
+            <form>
+                <div class="form-group">
+                    <label for="name">name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="address">address</label>
+                    <input type="text" id="address">
+                </div>
+                <div class="form-group">
+                    <label for="telephone">telephone</label>
+                    <input type="tel" id="telephone">
+                </div>
+            </form>
+            <a id="confirmNav" class="btn-success" href="#confirmation">Confirm Order</a>
+
+        </div>
+
+        <div id="confirmation" class="tab-pane">
+            <p>If this is showing up, something broke :(</p>
         </div>
     </div>
 </div>
-
-
-
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
