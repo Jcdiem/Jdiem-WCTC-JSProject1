@@ -5,7 +5,7 @@ $(document).ready(
         $("#tabs a").click(showTab);
         $('#confirmNav').click(showTab);
         $('#pizzaBtn').click(unlockShipping);
-        $('#confirmNav').click(updateConfirmationPage());
+        $('#confirmNav').click(updateConfirmationPage);
 
         // other functions
         function showTab(event) {
